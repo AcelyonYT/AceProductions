@@ -103,7 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-clover/public/main.js
 package-lock.json
 .babelrc
 webpack.config.js
