@@ -1,12 +1,16 @@
 import React from "react";
 import "../../css/pages/home.css";
+import List from "../components/list/homeList";
 
 function Home() {
     return (
         <div id="homeContent">
-            <h1>Welcome to Ace Productions!</h1>
+            <div id="contentBox">
+                <>
+                    <List />
+                </>
+            </div>
         </div>
     );
 }
-
 export default Home;
