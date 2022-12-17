@@ -2,7 +2,7 @@
   "name": "aceproductions",
   "description": "Website for my projects.",
   "version": "1.0.0",
-  "main": "./src/index.js",
+  "main": "./src/frontend/index.js",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
