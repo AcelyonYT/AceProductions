@@ -4,13 +4,10 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <nav>
-            <ul>
+        <nav id="navbar">
+            <ul id="optionList">
                 <li onClick={changeTitle.bind(changeTitle, "Welcome to Ace Productions")} className="navOptions">
                     <Link to="/">Home</Link>
-                </li>
-                <li onClick={changeTitle.bind(changeTitle, "Welcome to Clover")} className="navOptions">
-                    <Link to="/clover">Clover</Link>
                 </li>
             </ul>
         </nav>

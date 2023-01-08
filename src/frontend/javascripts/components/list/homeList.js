@@ -17,10 +17,6 @@ function List() {
                 <li>Weather App</li>
                 <li>Quiz Game</li>
             </ul>
-            <h3 className="listTitle">Big Projects</h3>
-            <ul>
-                <li>Clover Social Media</li>
-            </ul>
         </div>
     );
 }
