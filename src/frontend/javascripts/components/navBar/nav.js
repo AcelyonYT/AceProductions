@@ -9,6 +9,9 @@ function NavBar() {
                 <li onClick={changeTitle.bind(changeTitle, "Welcome to Ace Productions")} className="navOptions">
                     <Link to="/">Home</Link>
                 </li>
+                <li onClick={changeTitle.bind(changeTitle, "Welcome to the Status Page")} className="navOptions">
+                    <Link to="/status">Status</Link>
+                </li>
             </ul>
         </nav>
     );
