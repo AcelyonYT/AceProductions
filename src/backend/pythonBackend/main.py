@@ -10,7 +10,7 @@ def home():
 
 @app.route("/working")
 def working():
-    return jsonify(message="Python backend is working!")
+    return jsonify(response="Python backend is working!")
 
 if __name__ == "__main__":
     app.run("localhost", 6969, debug=True)
