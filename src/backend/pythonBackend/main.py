@@ -4,6 +4,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/")
+def default():
+    return "Easy Python"
+
 @app.route("/welcome")
 def home():
     return "Hello!"
