@@ -27,14 +27,14 @@ function Status() {
     )
 }
 
-function getStatus(url, type, getData){
+function getStatus(url: string | URL | Request, type: String, getData: React.Dispatch<React.SetStateAction<string>>){
     fetch(url).catch(() => {
         console.log(`Cannot get ${type} backend`)
     }).then(
         res => res === undefined ? console.log("Cannot conver to JSON") : res.json()
     ).then(data => {
-        data === undefined ? getData(undefined) : getData(data.response);
-    })
+        data === undefined ? console.log("Cannot get data") : getData(data.response);
+    });
 }
 
 export default Status;

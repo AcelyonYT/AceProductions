@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
     mode: "development",
-    entry: "./src/frontend/index.js",
+    entry: "./src/frontend/index.tsx",
     output: {
         path: path.resolve(__dirname, "public"),
         filename: "main.js"
@@ -17,7 +17,7 @@ module.exports = {
         liveReload: true
     },
     resolve: {
-        extensions: [".js", ".jsx", ".json", ".ts"]
+        extensions: [".js", ".jsx", ".json", ".ts", ".tsx"]
     },
     module: {
         rules: [
@@ -30,6 +30,11 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: "ts-loader"
             }
         ]
     }

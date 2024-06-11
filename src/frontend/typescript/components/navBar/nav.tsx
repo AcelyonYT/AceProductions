@@ -12,13 +12,16 @@ function NavBar() {
                 <li onClick={changeTitle.bind(changeTitle, "Welcome to the Status Page")} className="navOptions">
                     <Link to="/status">Status</Link>
                 </li>
+                <li onClick={changeTitle.bind(changeTitle, "Game")} className="navOptions">
+                    <Link to="/game">Game</Link>
+                </li>
             </ul>
         </nav>
     );
 }
 
-function changeTitle(title){
-    document.getElementById('title').innerHTML = `${title}`;
+function changeTitle(title: string){
+    document.getElementById('title')!.innerHTML = `${title}`;
 }
 
 export default NavBar;
