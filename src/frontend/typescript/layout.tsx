@@ -8,8 +8,8 @@ import Footer from "./layouts/footer";
 const Layout = () => {
     return (
         <>
-            <Header />
             <NavBar />
+            <Header />
             <Wrapper />
             <Footer />
             <Outlet />

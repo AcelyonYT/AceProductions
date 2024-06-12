@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import './App.css';
+import './css/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./typescript/layout";
 
