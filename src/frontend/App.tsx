@@ -1,22 +1,29 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import './css/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./typescript/layout";
 
-function App() {
-    const pathsArray: string[] = [ "/", "/status", "/game" ];
-    return (
-        <BrowserRouter>
-            <Routes>
-                {createPaths(pathsArray)}
-            </Routes>
-        </BrowserRouter>
-    );
-}
+const layout = new Layout();
 
-function createPaths(pathArray: string[]) {
-    let createdPaths: React.JSX.Element[] = pathArray.map<React.JSX.Element>((x, index) => <Route key={index} path={x} element={<Layout />}></Route>)
-    return createdPaths
-}
+export default class App {
+    constructor() {}
 
-export default App;
+    render() {
+        const pathsArray: string[] = [ "/", "/status", "/game" ];
+        return (
+            <BrowserRouter>
+                <Routes>
+                    { App.createPaths( pathsArray ) }
+                </Routes>
+            </BrowserRouter>
+        );
+    }
+
+    static createPaths( pathArray: string[] ) {
+        let createdPaths: React.JSX.Element[] = pathArray.map<React.JSX.Element>(
+            (x, index) => <Route key={index} path={x} element={<layout.render />}>
+            </Route>
+        );
+        return createdPaths
+    }
+}

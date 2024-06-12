@@ -1,11 +1,13 @@
 import React from "react";
 
-function Game() {
-    return(
-        <div id="gameContent">
-            
-        </div>
-    )
-}
+export default class Game {
+    constructor() {}
 
-export default Game
+    render() {
+        return (
+            <div id="gameContent">
+            
+            </div>
+        )
+    }
+}

@@ -1,11 +1,13 @@
 import React from 'react';
 import "../../css/layouts/footer.css";
 
-function Footer() {
-    return(
-        <div id='footer'>
-        </div>
-    )
-}
+export default class Footer {
+    constructor() {}
 
-export default Footer;
+    render() {
+        return (
+            <div id='footer'>
+            </div>
+        )
+    }
+}

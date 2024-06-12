@@ -3,27 +3,36 @@ import Home from '../pages/home';
 import Status from '../pages/status';
 import Game from '../pages/game';
 
-function Wrapper() {
-    const curWindow = window.location.pathname;
-    let Content: any;
-    switch(curWindow) {
-        case "/":
-            Content = Home;
-        break;
-        case "/status":
-            Content = Status;
-        break;
-        case "/game":
-            Content = Game;
-        break;
-    }
-    return (
-        <div id="wrapper">    
-            <>
-                <Content />
-            </>
-        </div>
-    )
-}
+const home = new Home();
+const status = new Status();
+const game = new Game();
 
-export default Wrapper;
+let Content: any;
+
+export default class Wrapper {
+    constructor() {}
+
+    render() {
+        let curWindow: string = window.location.pathname;
+        
+        switch( curWindow ) {
+            case "/":
+                Content = home.render;
+            break;
+            case "/status":
+                Content = status.render;
+            break;
+            case "/game":
+                Content = game.render;
+            break;
+        }
+
+        return (
+            <div id="wrapper">    
+                <>
+                    <Content />
+                </>
+            </div>
+        )
+    }
+}

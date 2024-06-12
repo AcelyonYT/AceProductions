@@ -1,40 +1,44 @@
 import React, { useState, useEffect } from "react"
 
-function Status() {
-    const [ data, setData ] = useState("");
-    const [ data1, setData1 ] = useState("");
-    useEffect(() => {
-        getStatus("http://localhost:6969/working", "python", setData);
-    }, []);
-    useEffect(() => {
-        getStatus("http://localhost:8080/working", "java", setData1);
-    }, []);
-    return (
-        <div id="statusContent">
-            <h1>Python Backend Status</h1>
-            {(typeof data === "undefined") ? (
-                <p>Loading...</p>
-            ) : (
-                <p>{data}</p>
-            )}
-            <h1>Java Backend Status</h1>
-            {(typeof data1 === "undefined") ? (
-                <p>Loading...</p>
-            ) : (
-                <p>{data1}</p>
-            )}
-        </div>
-    )
-}
+export default class Status {
+    constructor() {}
 
-function getStatus(url: string | URL | Request, type: String, getData: React.Dispatch<React.SetStateAction<string>>){
-    fetch(url).catch(() => {
-        console.log(`Cannot get ${type} backend`)
-    }).then(
-        res => res === undefined ? console.log("Cannot conver to JSON") : res.json()
-    ).then(data => {
-        data === undefined ? console.log("Cannot get data") : getData(data.response);
-    });
-}
+    render() {
+        const [ data, setData ] = useState("");
+        const [ data1, setData1 ] = useState("");
 
-export default Status;
+        useEffect(() => {
+            Status.getStatus("http://localhost:6969/working", "python", setData);
+        }, []);
+        useEffect(() => {
+            Status.getStatus("http://localhost:8080/working", "java", setData1);
+        }, []);
+
+        return (
+            <div id="statusContent">
+                <h1>Python Backend Status</h1>
+                { ( typeof data === "undefined" ) ? (
+                    <p>Loading...</p>
+                ) : (
+                    <p>{data}</p>
+                ) }
+                <h1>Java Backend Status</h1>
+                { ( typeof data1 === "undefined" ) ? (
+                    <p>Loading...</p>
+                ) : (
+                    <p>{data1}</p>
+                ) }
+            </div>
+        )
+    }
+
+    static getStatus(url: string | URL | Request, type: String, getData: React.Dispatch<React.SetStateAction<string>>){
+        fetch(url).catch(() => {
+            console.log(`Cannot get ${type} backend`)
+        }).then(
+            res => res === undefined ? console.log("Cannot conver to JSON") : res.json()
+        ).then(data => {
+            data === undefined ? console.log("Cannot get data") : getData(data.response);
+        });
+    }
+}

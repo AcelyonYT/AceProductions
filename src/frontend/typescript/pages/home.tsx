@@ -1,14 +1,18 @@
 import React from "react";
 import List from "../components/list/homeList";
 
-function Home() {
-    return (
-        <div id="homeContent">
-            <>
-                <List />
-            </>
-        </div>
-    );
-}
+const list = new List();
 
-export default Home;
+export default class Home {
+    constructor() {}
+
+    render() {
+        return (
+            <div id="homeContent">
+                <>
+                    <list.render />
+                </>
+            </div>
+        )
+    }
+}
