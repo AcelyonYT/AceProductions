@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "main": "./src/frontend/index.tsx",
   "dependencies": {
+    "express": "^4.19.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
@@ -30,7 +31,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "Webpack"
+    "build": "Webpack",
+    "startExpress": ""
   },
   "repository": {
     "type": "git",
