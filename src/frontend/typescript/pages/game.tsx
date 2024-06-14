@@ -6,7 +6,7 @@ export default class Game {
     render() {
         return (
             <div id="gameContent">
-            
+                
             </div>
         )
     }
