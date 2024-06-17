@@ -23,7 +23,7 @@ export default class Wrapper {
         }
 
         return (
-            <div id="wrapper">    
+            <div className="wrapper">    
                 <>
                     <Content />
                 </>

@@ -7,8 +7,8 @@ export default class Header {
 
     render() {
         return (
-            <div id="box">
-                <div id="titleBox">
+            <div className="headerBox">
+                <div id="titleBox" className='titleBox'>
                     { Header.createTitle() }
                 </div>
             </div>
@@ -19,9 +19,9 @@ export default class Header {
         const Location = useLocation();
         switch( Location.pathname ){
             case "/home":
-                return <h1 id='title'>Ace Productions</h1>
+                return <h1 className='title'>Ace Productions</h1>
             case "/status":
-                return <h1 id='title'>Status</h1>
+                return <h1 className='title'>Status</h1>
         }
     }
 }

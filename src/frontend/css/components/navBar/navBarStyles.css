@@ -1,7 +1,8 @@
 #optionList {
     margin: 0%;
 }
-.navOptions {
+
+#navOptions {
     display: inline;
     margin-right: 15px;
     font-size: 25px;

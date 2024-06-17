@@ -7,8 +7,8 @@ export default class NavBar {
 
     render() {
         return (
-            <nav id="navbar">
-                <ul id="optionList">
+            <nav className="navBar">
+                <ul className="optionList">
                     <li className="navOptions">
                         <Link to="/home">Home</Link>
                     </li>

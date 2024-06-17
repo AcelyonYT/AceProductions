@@ -5,3 +5,28 @@ body {
     width: 100%;
     height: 100%;
 }
+
+.navBar {
+    grid-area: navBar;
+}
+
+.headerBox {
+    grid-area: headerBox;
+}
+
+.wrapper {
+    grid-area: wrapper;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-areas: 
+    "headerBox  headerBox   headerBox"
+    "navBar     wrapper     wrapper"
+    "footer     footer      footer";
+}

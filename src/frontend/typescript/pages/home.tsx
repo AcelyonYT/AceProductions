@@ -1,7 +1,4 @@
 import React from "react";
-import List from "../components/list/homeList";
-
-const list = new List();
 
 export default class Home {
     constructor() {}
@@ -9,9 +6,12 @@ export default class Home {
     render() {
         return (
             <div id="homeContent">
-                <>
-                    <list.render />
-                </>
+               <div className="slideShow">
+                
+               </div>
+               <div className="changeLogs">
+
+               </div>
             </div>
         )
     }

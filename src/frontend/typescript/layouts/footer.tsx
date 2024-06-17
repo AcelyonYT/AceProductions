@@ -6,7 +6,7 @@ export default class Footer {
 
     render() {
         return (
-            <div id='footer'>
+            <div className='footer'>
             </div>
         )
     }
