@@ -1,5 +1,6 @@
 import React from 'react';
-import "../../css/layouts/header.css"
+import { useLocation } from 'react-router-dom';
+import "../../css/layouts/header.css";
 
 export default class Header {
     constructor() {}
@@ -8,9 +9,19 @@ export default class Header {
         return (
             <div id="box">
                 <div id="titleBox">
-                    <h1 id='title'>Welcome to Ace Productions</h1>
+                    { Header.createTitle() }
                 </div>
             </div>
         );
+    }
+
+    static createTitle() {
+        const Location = useLocation();
+        switch( Location.pathname ){
+            case "/home":
+                return <h1 id='title'>Ace Productions</h1>
+            case "/status":
+                return <h1 id='title'>Status</h1>
+        }
     }
 }

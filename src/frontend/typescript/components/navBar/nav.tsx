@@ -9,21 +9,14 @@ export default class NavBar {
         return (
             <nav id="navbar">
                 <ul id="optionList">
-                    <li onClick={NavBar.changeTitle.bind(NavBar.changeTitle, "Welcome to Ace Productions")} className="navOptions">
-                        <Link to="/">Home</Link>
+                    <li className="navOptions">
+                        <Link to="/home">Home</Link>
                     </li>
-                    <li onClick={NavBar.changeTitle.bind(NavBar.changeTitle, "Welcome to the Status Page")} className="navOptions">
+                    <li className="navOptions">
                         <Link to="/status">Status</Link>
-                    </li>
-                    <li onClick={NavBar.changeTitle.bind(NavBar.changeTitle, "Game")} className="navOptions">
-                        <Link to="/game">Game</Link>
                     </li>
                 </ul>
             </nav>
         )
-    }
-
-    static changeTitle( title: string ) {
-        document.getElementById('title')!.innerHTML = `${title}`;
     }
 }

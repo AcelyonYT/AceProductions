@@ -9,7 +9,7 @@ export default class App {
     constructor() {}
 
     render() {
-        const pathsArray: string[] = [ "/", "/status", "/game" ];
+        const pathsArray: string[] = [ "/home", "/status" ];
         return (
             <BrowserRouter>
                 <Routes>
